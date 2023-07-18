@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Çizim Uygulaması</title>
+</head>
+
+
+<body>
+    <canvas id="canvas" width="600" height="600"></canvas>
+
+    <label id="klmrngi" for="renkSec">Kalem Rengi</label>
+    <br>
+    <input type="color" id="renkSec" onchange="renkDegistir(this.value)">
+    <br>
+    <label id="klmbytu" for="boyutSec">Kalem Boyutu</label>
+    <input id="byt" type="range" id="boyutSec" min="1" max="20" onchange="boyutDegistir(this.value)" value="1">
+    <br>
+
+    <button id="dzcgi" onclick="cizgiCiz()">Düz Çizgi</button>
+    <button id="kreciz" onclick="kareCiz()">Kare</button>
+    <button id="dkdrgncz" onclick="dikdortgenCiz()">Dikdörtgen</button>
+    <button id="direcz" onclick="daireCiz()">Daire</button>
+    <button id="tmz" onclick="temizle()">Temizle</button>
+
+    <script src="fabric.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
